@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  root 'pages#homepage'
-  get 'about', to: 'pages#about'
   resources :articles
+  get 'about', to: 'pages#about'
+  root 'pages#homepage'
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

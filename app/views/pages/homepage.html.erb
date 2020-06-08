@@ -1,10 +1,38 @@
-<div class="c-screen c-screen--intro-page u-pad-h-md container__row--v-center u-dis-flex">
-  <div class="container  flex-column-tablet u-transition-in">
-    <h1>Ruby on Rails Projects</h1>
-    <p class="h2">A example of multiple ruby on rails projects</p>
+<div>
+  <div class="c-screen c-screen--intro-page u-pad-h-md container__row--v-center u-dis-flex u-pad-v-md" id="home">
+    <div class="container container__row--v-center flex-column-tablet  u-transition-in">
+      <div class="col-5@lg col-12 u-mar-r-md@md u-pad-v-md">
+        <div class="c-profile-pic"></div>
+      </div>
+      <div class="col-7@md col-12 container container__column">
+        <h1>Ian Duffy</h1>
+        <p class="h2">A selection of Ruby on Rails apps I have built.</p>
+        <div class="container__row u-mar-v-md">
+          <a class="c-btn col-5 u-mar-r-md u-stretch" href="https://www.iankduffy.com" target="_blank" rel="noopener">My Portfolio</a>
+          <a class="c-btn col-5 u-mar-r-md u-stretch" href="https://github.com/iankduffy" target="_blank" rel="noopener">My Github</a>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <section class="container u-pad-t-lg">
+    <h2>About this site</h2>
+    <p>Ut officia velit est ipsum. Nulla magna sint cupidatat excepteur ex irure anim et et eu. Adipisicing ipsum Lorem ad occaecat mollit. Proident tempor adipisicing ex aliqua ea dolor do fugiat. Do aliqua est nostrud irure exercitation fugiat irure. Eiusmod duis cillum incididunt elit dolor.</p>
+  </section>
+
+  <section class="container u-pad-v-lg">
+    <h2>Projects</h2>
+    <p>Ut officia velit est ipsum. Nulla magna sint cupidatat excepteur ex irure anim et et eu. Adipisicing ipsum Lorem ad occaecat mollit. Proident tempor adipisicing ex aliqua ea dolor do fugiat. Do aliqua est nostrud irure exercitation fugiat irure. Eiusmod duis cillum incididunt elit dolor.</p>
+    <div class="container__row u-mar-v-md">
+      <% @articles.each do |article| %>
+        <%= link_to article_path(article), class: "c-project col-3@md col-12" do %>
+          <div class="u-pad-h-md">
+            <h3><%= article.title %></h3>
+            <p><%= article.description %></p>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    <%= link_to 'Articles Page', articles_path, class: "c-btn u-center col-12 col-4@md"%>
+  </section>
 </div>
-
-<%= link_to 'Articles Page', articles_path%> |
-<%= link_to 'About Page', about_path%> |
-

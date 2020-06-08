@@ -2,14 +2,14 @@
   background: $white;
   margin: 7px 7px;
   flex: 1 1 auto;
-  text-align: left;
+  text-align: center;
   text-decoration: none;
   color: $primary-color;
   padding: 0 0; 
   position: relative;
   align-self: stretch;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   height: 100%;
   transition: 500ms;
