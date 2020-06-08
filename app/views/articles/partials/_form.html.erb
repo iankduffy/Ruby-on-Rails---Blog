@@ -1,18 +1,20 @@
-<% if @article.errors.any? %>
-  <% @article.errors.full_messages.each do |err|%>
-    <p><%= err %></p>
-  <% end%>
-<% end %>
+<div class="u-center col-12 col-10@md ">
+  <% if @article.errors.any? %>
+    <% @article.errors.full_messages.each do |err|%>
+      <p><%= err %></p>
+    <% end%>
+  <% end %>
 
-<%= form_with(model: @article, local: true) do |f| %>
-  <div>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-  <div>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-  </div>
+  <%= form_with(model: @article, local: true, class: "o-form") do |f| %>
+    <div>
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "o-input" %>
+    </div>
+    <div>
+      <%= f.label :description %>
+      <%= f.text_area :description, rows: 10, class: "o-input" %>
+    </div>
 
-  <%= f.submit %>
-<% end %>
+    <%= f.submit class: "c-btn" %>
+  <% end %>
+</div>

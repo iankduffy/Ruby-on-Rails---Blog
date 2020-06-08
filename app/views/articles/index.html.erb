@@ -1,17 +1,10 @@
-<h1>All Articles</h1>
+<div class="container">
+  <h1>All Articles</h1>
 
-<div class="container container__row u-mar-v-md">
-  <% @articles.each do |article| %>
-    <div class="c-project col-3@md col-12" do %>
-      <div class="u-pad-h-md">
-        <h3><%= article.title %></h3>
-        <p><%= article.description %></p>
-      </div>
-    
-      <%= link_to 'Show', article_path(article) %>
-      <%= link_to 'Edit', edit_article_path(article) %>
-      <%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: "Are you sure you want to delete this?" } %>
+  <div class="container container__row u-mar-v-md">
+    <% @articles.each do | article | %>
+    <%= render partial: "articles/partials/project-link", locals: { article: article }%>
+    <% end %>
   </div>
-  <% end %>
+  <%= link_to 'Create', new_article_path, class: "c-btn" %>
 </div>
-<%= link_to 'Create', new_article_path, class: "c-btn" %>
