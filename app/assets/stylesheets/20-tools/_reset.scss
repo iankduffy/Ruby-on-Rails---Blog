@@ -1,0 +1,30 @@
+img {
+  max-width: 100%;
+}
+
+button {
+  display: block; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%; 
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  color: $black;
+}
+
+html {
+  scroll-padding-top: 50px;
+
+  scroll-padding-top: 20px;
+  font-size: 15px; 
+  @include breakpoint-min(lg) {
+    font-size: 17px;
+  }
+}
