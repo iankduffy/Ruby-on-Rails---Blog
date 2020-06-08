@@ -27,17 +27,16 @@
 
   &--intro-page{
     min-height: 50vh;
-    background-image: asset-url("/assets/slash.jpg");
+    background-image: image-url("slash.jpg");
 
     @include breakpoint-max(md) {
       min-height: 90vh;
     }
   }
-
 }
 
 .c-profile-pic {
-  background-image: url(/assets/profile-image.jpg);
+  background-image: image-url("profile-image.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%;
