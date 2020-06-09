@@ -1,0 +1,17 @@
+<div class="u-center col-12 col-10@md ">
+  <%= form_with(model: @user, local: true, class: "o-form") do |f| %>
+    <div>
+      <%= f.label :username %>
+      <%= f.text_field :username, class: "o-input" %>
+    </div>
+    <div>
+      <%= f.label :email %>
+      <%= f.text_field :email, class: "o-input" %>
+    </div>
+    <div>
+      <%= f.label :password %>
+      <%= f.password_field :password, class: "o-input" %>
+    </div>
+    <%= f.submit class: "c-btn" %>
+  <% end %>
+</div>
