@@ -1,6 +1,8 @@
 
+<%= render partial: "articles/partials/page-introduction", locals: { article: @article } %>
+
 <div class="container">
-  <h1 class="h3"><%= @article.title %></h1>
+  <h1 class="h3"></h1>
   <p><%= @article.description %></p>
   <p>By <%= @article.user.username if @article.user %></p>
 

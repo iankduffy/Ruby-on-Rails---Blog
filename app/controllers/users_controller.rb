@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # before_action :get_article, only: [:show, :edit, :update, :destroy]
+  before_action :get_user, only: [:show, :edit, :update, :destroy]
 
   def show
   end
@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   end 
 
   def update
-    if @user.update(article_params)
+    if @user.update(user_params)
       flash[:notice] = "User was created successful"
       redirect_to articles_path
     else 
@@ -31,6 +31,10 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def get_user 
+    @user = User.find(params[:id])
+  end
 
   def user_params
     params.require(:user).permit(:username, :email, :password)
