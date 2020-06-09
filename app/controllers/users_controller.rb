@@ -8,6 +8,18 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def edit
+  end 
+
+  def update
+    if @user.update(article_params)
+      flash[:notice] = "User was created successful"
+      redirect_to articles_path
+    else 
+      render 'edit'
+    end
+  end
+
   def create
     @user = User.new(user_params)
     if @user.save
