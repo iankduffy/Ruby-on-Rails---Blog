@@ -1,0 +1,44 @@
+.c-action-message {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: $transparent-primary;
+  border: 1px solid $primary-color;
+  max-width: 1200px; 
+  width: 90%;
+  padding: 10px;
+  z-index: 10;
+
+  p {
+   margin-bottom: 0;
+   color: $white;
+  }
+}
+
+.u-animate-hide {
+  animation: 1s forwards 3s hide-upwards;
+}
+
+@keyframes hide-upwards { 
+  from { 
+    transform: translate(-50%, 0); 
+  } 
+  to { 
+    transform: translate(-50%, -100%); 
+  }  
+}
+
+.c-err-message {
+  background: transparentize(#D24D57, 0.2);
+  border: 1px solid #C3272B;
+  max-width: 1200px;
+  padding: 10px;
+  margin-bottom: 5px;
+  color: #fff;
+  border-radius: 5px;
+
+  p {
+    margin-bottom: 0;
+  }
+}

@@ -1,12 +1,12 @@
 <div>
-  <div class="c-screen c-screen--intro-page u-pad-h-md container__row--v-center u-dis-flex u-pad-v-md" id="home">
+  <div class="c-screen c-screen--intro-page u-pad-h-md container__row--v-center u-dis-flex u-pad-v-md u-mar-b-md" id="home">
     <div class="container container__row--v-center flex-column-tablet  u-transition-in">
       <div class="col-5@lg col-12 u-mar-r-md@md u-pad-v-md">
         <div class="c-profile-pic"></div>
       </div>
       <div class="col-7@md col-12 container container__column">
         <h1>Ian K Duffy</h1>
-        <p class="h2">A Collection of Ruby on Rails projects.</p>
+        <p class="h2">A Showcase of Ruby on Rails projects.</p>
         <div class="container__row u-mar-v-md">
           <a class="c-btn col-5 u-mar-r-md u-stretch" href="https://www.iankduffy.com" target="_blank" rel="noopener">My Portfolio</a>
           <a class="c-btn col-5 u-mar-r-md u-stretch" href="https://github.com/iankduffy" target="_blank" rel="noopener">My Github</a>
@@ -15,12 +15,12 @@
     </div>
   </div>
   <div class="container">
-    <section class="u-pad-t-lg col-12 col-8@md">
+    <section class="col-12 col-8@md">
       <h2>About this site</h2>
-      <p>I originally started building this site </p>
+      <p>I have built this site as a showcase of my ruby on rails projects as apart of my main website. With the aim to improve my skills, build various projects and showcase my skills with a bit of an explanation on how they are built. </p>
     </section>
 
-    <section class="u-pad-v-lg">
+    <section class="u-pad-v-md">
       <h2>Projects</h2>
       <p>Ut officia velit est ipsum. Nulla magna sint cupidatat excepteur ex irure anim et et eu. Adipisicing ipsum Lorem ad occaecat mollit. Proident tempor adipisicing ex aliqua ea dolor do fugiat. Do aliqua est nostrud irure exercitation fugiat irure. Eiusmod duis cillum incididunt elit dolor.</p>
       <div class="container__row u-mar-v-md">
@@ -28,9 +28,10 @@
           <%= render partial: "articles/partials/project-link", locals: { article: article } %>
         <% end %>
       </div>
-      <%= link_to 'Articles Page', articles_path, class: "c-btn u-center col-12 col-4@md"%>
-      <%= link_to 'Sign Up', signup_path, class: "c-btn u-center col-12 col-4@md"%>
-
+      <div class="container__row">
+        <%= link_to 'Articles Page', articles_path, class: "c-btn u-center col-12 col-4@md"%>
+        <%= link_to 'Sign Up', signup_path, class: "c-btn u-center col-12 col-4@md"%>
+      </div>
     </section>
   </div>
 </div>
