@@ -41,7 +41,7 @@
   }
 
   &:hover:not(.c-project--disabled){
-    
+
     .c-project__image .img {
       transform: scale(1.1); 
     }
@@ -49,6 +49,5 @@
 
   &--disabled {
     opacity: 0.6;
-    
   }
 }
