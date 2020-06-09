@@ -2,7 +2,7 @@
     <div class="u-pad-h-md">
       <h3><%= article.title %></h3>
       <p><%= truncate(article.description, length:100) %></p>
-      <p>By <%= article.user.username %></p>
+      <p>By <%= article.user.username if @article.user %></p>
     </div>
     <div class="container__row container--center">
       <%= link_to 'Show', article_path(article), class: "c-btn" %>

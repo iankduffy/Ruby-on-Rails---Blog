@@ -2,7 +2,7 @@
 <div class="container">
   <h1 class="h3"><%= @article.title %></h1>
   <p><%= @article.description %></p>
-  <p>By <%= @article.user.username %></p>
+  <p>By <%= @article.user.username if @article.user %></p>
 
   <%= link_to 'Edit', edit_article_path(@article) %> |
   <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Are you sure you want to delete this?" } %> |
