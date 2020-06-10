@@ -3,7 +3,7 @@
   background-position: center; 
   position: relative;
   color: #fff;
-  min-height: 40vh;
+  min-height: 30vh;
   
   &:after {
     content: ""; 
@@ -22,7 +22,7 @@
   }
 
   @include breakpoint-max(md) {
-    min-height: 70vh;
+    min-height: 10vh;
   }
 
   &--intro-page{

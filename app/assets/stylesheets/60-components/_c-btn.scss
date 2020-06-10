@@ -13,6 +13,15 @@
   &:hover{
     background: transparentize(#EEEEEE, 0.1)
   }
+
+  &--pri {
+    background: $primary-color;
+    color: #EEEEEE;
+
+    &:hover{
+      background: transparentize($primary-color, 0.1)
+    }
+  }
 }
 
 .c-full-width {
