@@ -1,17 +1,20 @@
-<div class="c-project col-3@md col-12" do %>
-    <div class="u-pad-h-md">
-      <h3><%= article.title %></h3>
-      <p><%= truncate(article.description, length:100) %></p>
-      <% if article.user %>
-        by <%= link_to article.user.username, user_path(article.user) %>
-      <% end %>
-    </div>
-    <div class="container__row container--center">
-      <%= link_to 'Show', article_path(article), class: "c-btn" %>
-      <% if logged_in? && article.user == current_user %>
-        <%= link_to 'Edit', edit_article_path(article), class: "c-btn"  %>
-        <%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: "Are you sure you want to delete this?" }, class: "c-btn"  %>
-      <% end %>
-    </div>
+<div class="c-project col-3@md col-12 u-bor-primary">
+  <div class="c-project__image u-mar-b-md">
+    <img src="https://d33wubrfki0l68.cloudfront.net/a72abdfad1f59a453284b84a55ff71a40a0dd63e/slash.jpg" lazy="true" alt="<%= article.title %>"/>
+  </div>
+  <div class="u-pad-h-md">
+    <h3><%= article.title %></h3>
+    <p><%= truncate(article.description, length:100) %></p>
+    <% if article.user %>
+      by <%= link_to article.user.username, user_path(article.user) %>
+    <% end %>
     <p class="h6">Created: <%= time_ago_in_words(article.created_at) %> Updated: <%= time_ago_in_words(article.created_at) %></p>
+  </div>
+  <div class="container__row container--center u-mar-t-md">
+    <%= link_to 'Show', article_path(article), class: "c-project__btn" %>
+    <% if logged_in? && article.user == current_user %>
+      <%= link_to 'Edit', edit_article_path(article), class: "c-project__btn"  %>
+      <%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: "Are you sure you want to delete this?" }, class: "c-project__btn"  %>
+    <% end %>
+  </div>
 </div>

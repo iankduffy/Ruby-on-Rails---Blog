@@ -1,4 +1,4 @@
-<div class="u-center col-12 col-10@md ">
+<div class="u-center o-form__container">
   <% if @user.errors.any? %>
     <% @user.errors.full_messages.each do |err|%>
       <div class="c-err-message">
@@ -20,6 +20,6 @@
       <%= f.label :password %>
       <%= f.password_field :password, class: "o-input" %>
     </div>
-    <%= f.submit(@user.new_record? ? "Sign Up" : "Update", class: "c-btn") %>
+    <%= f.submit(@user.new_record? ? "Sign Up" : "Update", class: "c-btn c-btn--pri col-12") %>
   <% end %>
 </div>
