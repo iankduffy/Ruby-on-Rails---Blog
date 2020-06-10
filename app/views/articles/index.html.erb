@@ -1,10 +1,15 @@
 <div class="container">
   <h1>All Articles</h1>
 
+  <div class="c-pagination">
+    <%= will_paginate @articles, :container => false %>
+  </div>
   <div class="container container__row u-mar-v-md">
     <% @articles.each do | article | %>
     <%= render partial: "articles/partials/project-link", locals: { article: article }%>
     <% end %>
   </div>
-  <%= link_to 'Create', new_article_path, class: "c-btn" %>
+  <% if logged_in? %>
+    <%= link_to 'Create', new_article_path, class: "c-btn" %>
+  <% end %>
 </div>

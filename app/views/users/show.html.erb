@@ -1,0 +1,20 @@
+<div class="container">
+  <h1 class="h2 u-t-cen"><%= @user.username %></h1>
+
+  <% if logged_in? && @user == current_user %>
+    <%= link_to 'Create new Article', new_article_path, class: "c-btn" %>
+    <%= link_to "Edit your profile", edit_user_path(@user), class: "c-btn" %>
+    <%= link_to "Delete profile", user_path(current_user), class: "c-btn", method: :delete, data: { confirm: "Are you sure?" } %> 
+  <% end %>
+
+  <p class="h3 u-t-cen">Articles</p>
+  
+  <%= will_paginate @articles, :container => false %>
+
+  <div class="container container__row u-mar-v-md">
+    <% @articles.each do | article | %>
+    <%= render partial: "articles/partials/project-link", locals: { article: article }%>
+    <% end %>
+  </div>
+
+</div>

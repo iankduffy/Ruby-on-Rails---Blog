@@ -1,0 +1,14 @@
+<div class="u-center col-12 col-10@md ">
+
+  <%= form_with(scope: :session, url: login_path, local: true, class: "o-form") do |f| %>
+    <div>
+      <%= f.label :email %>
+      <%= f.email_field :email, class: "o-input" %>
+    </div>
+    <div>
+      <%= f.label :password %>
+      <%= f.password_field :password, class: "o-input" %>
+    </div>
+    <%= f.submit("Sign In", class: "c-btn") %>
+  <% end %>
+</div>
