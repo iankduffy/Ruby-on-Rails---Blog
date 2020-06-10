@@ -15,21 +15,29 @@
     </div>
   </div>
   <div class="container">
-    <section class="col-12 col-8@md">
-      <h2>About this site</h2>
-      <p>I have built this site as a showcase of my ruby on rails projects as apart of my main website. With the aim to improve my skills, build various projects and showcase my skills with a bit of an explanation on how they are built. </p>
+    <section class="container__row container--space-between">
+      <div class="col-12 col-8@md u-pad-r-lg">
+        <h2>About this site</h2>
+        <p>I have built this site as a showcase of my ruby on rails projects as apart of my main website. With the aim to improve my skills, build various projects and showcase my skills with a bit of an explanation on how they are built. </p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+      </div>
+      <div class="c-author u-bor-primary u-pad-v-md u-pad-h-md col-11 col-4@md">
+        <p>Dolor amet elit tempor ut incididunt labore consequat tempor id laboris elit eiusmod nulla ipsum.</p>
+        <p>Dolor amet elit tempor ut incididunt labore consequat tempor id laboris elit eiusmod nulla ipsum.</p>
+        <a class="c-btn u-mar-r-md u-stretch col-12" href="https://github.com/iankduffy" target="_blank" rel="noopener">This Github Repo</a>
+      </div>
     </section>
 
-    <section class="u-pad-v-md">
+    <section class="u-pad-v-lg">
       <h2>Projects</h2>
-      <p>Ut officia velit est ipsum. Nulla magna sint cupidatat excepteur ex irure anim et et eu. Adipisicing ipsum Lorem ad occaecat mollit. Proident tempor adipisicing ex aliqua ea dolor do fugiat. Do aliqua est nostrud irure exercitation fugiat irure. Eiusmod duis cillum incididunt elit dolor.</p>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
       <div class="container__row u-mar-v-md">
         <% @articles.each do |article| %>
           <%= render partial: "articles/partials/project-link", locals: { article: article } %>
         <% end %>
       </div>
       <div class="container__row">
-        <%= link_to 'Articles Page', articles_path, class: "c-btn u-center col-12 col-4@md"%>
+        <%= link_to 'Articles Page', articles_path, class: "c-btn--pri c-btn u-center col-12 col-4@md"%>
       </div>
     </section>
   </div>
