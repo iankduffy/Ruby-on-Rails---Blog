@@ -9,7 +9,7 @@
     <%= render partial: "articles/partials/project-link", locals: { article: article }%>
     <% end %>
   </div>
-  <% if logged_in? %>
+  <% if logged_in? && current_user.is_admin == true %>
     <%= link_to 'Create', new_article_path, class: "c-btn" %>
   <% end %>
 </div>
