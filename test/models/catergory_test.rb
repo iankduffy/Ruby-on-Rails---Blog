@@ -20,4 +20,14 @@ class CategoryTest < ActiveSupport::TestCase
     @category_new = Category.new(name: "Testing")
     assert_not @category_new.valid?
   end
+
+  test "name should have max length" do 
+    @category.name = "a" * 56
+    assert_not @category.valid?
+  end
+
+  test "name should have min length" do 
+    @category.name = "aa"
+    assert_not @category.valid?
+  end
 end

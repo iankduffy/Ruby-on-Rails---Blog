@@ -1,0 +1,17 @@
+<div class="u-center o-form__container">
+  <% if @category.errors.any? %>
+    <% @category.errors.full_messages.each do |err|%>
+      <div class="c-err-message">
+        <p><%= err %></p>
+      </div>
+    <% end%>
+  <% end %>
+
+  <%= form_with(model: @category, local: true, class: "o-form") do |f| %>
+    <div>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "o-input" %>
+    </div>
+    <%= f.submit("Add Category", class: "c-btn c-btn--pri col-12") %>
+  <% end %>
+</div>
