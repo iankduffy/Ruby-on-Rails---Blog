@@ -1,0 +1,15 @@
+<%= render partial: "shared/page-introduction", locals: { text: "Categories", backgroundImage: "slash.jpg" } %>
+
+<div class="container">
+  <div class="c-pagination">
+    <%= will_paginate @articles, :container => false %>
+  </div>
+  <div class="container container__row u-mar-v-md">
+    <% @categories.each do | category | %>
+      <%= category.name %>
+    <% end %>
+  </div>
+  <% if logged_in? && current_user.is_admin == true %>
+
+  <% end %>
+</div>
