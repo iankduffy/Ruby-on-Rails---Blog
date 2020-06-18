@@ -1,3 +1,6 @@
+
+const purgecss = require('@fullhuman/postcss-purgecss')
+
 module.exports = {
   plugins: [
     require('postcss-import'),
@@ -7,6 +10,9 @@ module.exports = {
         flexbox: 'no-2009'
       },
       stage: 3
+    }), 
+    purgecss({
+      content: ['./app/views/**/*.html.erb']
     })
   ]
 }

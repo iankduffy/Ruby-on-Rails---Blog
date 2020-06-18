@@ -18,5 +18,5 @@ const SimpleMDE = require("simplemde")
 const simpleForm = document.querySelectorAll(".js-simplemde-form")
 
 for (let forms of simpleForm) {
-  form = new SimpleMDE({ element: forms })
+  new SimpleMDE({ element: forms })
 }
