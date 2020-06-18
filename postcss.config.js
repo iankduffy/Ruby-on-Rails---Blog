@@ -1,6 +1,4 @@
 
-const purgecss = require('@fullhuman/postcss-purgecss')
-
 module.exports = {
   plugins: [
     require('postcss-import'),
@@ -11,7 +9,7 @@ module.exports = {
       },
       stage: 3
     }), 
-    purgecss({
+    require('@fullhuman/postcss-purgecss')({
       content: ['./app/views/**/*.html.erb']
     })
   ]
