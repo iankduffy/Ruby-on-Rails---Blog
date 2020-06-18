@@ -1,9 +1,11 @@
 
 <%= render partial: "shared/page-introduction", locals: { text: @article.title, backgroundImage: "slash.jpg" } %>
 
+<% p @article %>
 <div class="container">
   <h1 class="h3"></h1>
-  <p><%= @article.description %></p>
+  <p><%= markdown(@article.description) %></p>
+  <p><%= markdown(@article.article_body) if @article.article_body %></p>
   <% if @article.user %>
     by <%= link_to @article.user.username, user_path(@article.user) %>
   <% end %>

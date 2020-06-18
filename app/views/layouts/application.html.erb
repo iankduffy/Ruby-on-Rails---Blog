@@ -5,8 +5,7 @@
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
 
   <body class="u-bg-grey">
@@ -24,11 +23,12 @@
         <%= link_to 'Log in', login_path, class: "o-header__link" %>
         <%= link_to 'Sign up', signup_path, class: "o-header__link" %>
       <% end %>
-      </ul>
+      </div>
     </nav>
     <main>
       <%= render partial: "layouts/partials/messages" %>
       <%= yield %>
     </main>
+    <%= javascript_pack_tag 'application', async: true %>
   </body>
 </html>

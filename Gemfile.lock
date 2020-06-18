@@ -173,7 +173,9 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    redcarpet (3.5.0)
     regexp_parser (1.7.1)
+    rouge (3.20.0)
     ruby_dep (1.5.0)
     rubyzip (2.3.0)
     sass-rails (6.0.0)
@@ -190,6 +192,7 @@ GEM
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
     shellany (0.0.1)
+    simplemde-rails (1.11.2)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -245,8 +248,11 @@ DEPENDENCIES
   pg
   puma (~> 4.1)
   rails (~> 6.0.2, >= 6.0.2.2)
+  redcarpet (~> 3.4)
+  rouge (~> 3.3)
   sass-rails (>= 6)
   selenium-webdriver
+  simplemde-rails
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.4)

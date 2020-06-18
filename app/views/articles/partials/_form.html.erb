@@ -14,8 +14,13 @@
     </div>
     <div>
       <%= f.label :description %>
-      <%= f.text_area :description, rows: 10, class: "o-input" %>
+      <%= f.text_area :description, rows: 3, class: "o-input" %>
     </div>
+    <div>
+      <%= f.label :article_body %>
+      <%= f.text_area :article_body, rows: 10, class: "o-input js-simplemde-form" %>
+    </div>
+
 
     <%= f.submit class: "c-btn c-btn--pri col-12" %>
   <% end %>
