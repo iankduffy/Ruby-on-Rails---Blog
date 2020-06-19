@@ -1,5 +1,5 @@
 
-<%= render partial: "shared/page-introduction", locals: { text: @article.title, backgroundImage: url_for(@article.image) } %>
+<%= render partial: "shared/page-introduction", locals: { text: @article.title, backgroundImage: nil } %>
 <article class="container">
   <h1 class="h3"></h1>
   <p><%= markdown(@article.description) %></p>
@@ -16,4 +16,4 @@
   <%= link_to 'Return to articles', articles_path%>
 </article>
 
-<%=  rails_blob_path(@article.image, only_path: true) %>
+<%=  image_tag @article.image %>
