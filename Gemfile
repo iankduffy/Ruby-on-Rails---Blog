@@ -27,6 +27,7 @@ gem 'rouge', '~> 3.3'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+gem "aws-sdk-s3", require: false
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -57,7 +58,7 @@ group :test do
 end
 
 group :production do
-  gem "google-cloud-storage", "~> 1.11", require: false
+  
   gem 'pg'
 end
 
