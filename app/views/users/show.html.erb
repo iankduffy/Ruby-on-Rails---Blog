@@ -1,7 +1,7 @@
 <div class="container">
   <h1 class="h2 u-t-cen"><%= @user.username %></h1>
 
-  <% if logged_in? && @user == current_user %>
+  <% if logged_in? && current_user.is_admin === true %>
     <%= link_to 'Create new Article', new_article_path, class: "c-btn" %>
     <%= link_to "Edit your profile", edit_user_path(@user), class: "c-btn" %>
     <%= link_to "Delete profile", user_path(current_user), class: "c-btn", method: :delete, data: { confirm: "Are you sure?" } %> 

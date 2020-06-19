@@ -57,6 +57,7 @@ group :test do
 end
 
 group :production do
+  gem "google-cloud-storage", "~> 1.11", require: false
   gem 'pg'
 end
 

@@ -49,7 +49,7 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :description, :article_body, :github_link, :deployed_link)
+    params.require(:article).permit(:title, :description, :article_body, :github_link, :deployed_link, :image)
   end
 
   def require_same_user
