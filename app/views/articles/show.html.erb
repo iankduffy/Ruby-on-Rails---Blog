@@ -1,9 +1,9 @@
 
-<%= render partial: "shared/page-introduction", locals: { text: @article.title, backgroundImage: "slash.jpg" } %>
-<div class="container">
+<%= render partial: "shared/page-introduction", locals: { text: @article.title, backgroundImage: url_for(@article.image) } %>
+<article class="container">
   <h1 class="h3"></h1>
   <p><%= markdown(@article.description) %></p>
-  <p><%= markdown(@article.article_body) if @article.article_body %></p>
+  <%= markdown(@article.article_body) if @article.article_body %>
   <%= link_to "Github Repo", @article.github_link, class: "c-btn", target: :_blank if @article.github_link %>
   <%= link_to "Deployed Link", @article.deployed_link, class: "c-btn", target: :_blank if @article.deployed_link %>
   <% if @article.user %>
@@ -14,6 +14,6 @@
     <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Are you sure you want to delete this?" } %> |
   <% end %>
   <%= link_to 'Return to articles', articles_path%>
-</div>
+</article>
 
-<% p @article.github_link %>
+<%=  %>
