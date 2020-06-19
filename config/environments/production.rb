@@ -33,7 +33,7 @@ Rails.application.configure do
     config.action_controller.asset_host = proc { |source|
       # use imgix for the file types in the array, but not for sprites.svg
       # sprites.svg needs to be on the same domain, otherwise, CORS issues
-      if [".jpg", ".jpeg", ".png", ".svg", ".webp"].include?(File.extname(source)) && !File.basename(source).include?("sprites-")
+      if [".jpg", ".jpeg", ".png", ".webp"].include?(File.extname(source)) && !File.basename(source).include?("sprites-")
         "https://rails-image-blog.s3-eu-west-1.amazonaws.com/"
       end
     }
