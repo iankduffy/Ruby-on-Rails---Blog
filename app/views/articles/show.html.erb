@@ -1,11 +1,11 @@
 
 <%= render partial: "shared/page-introduction", locals: { text: @article.title, backgroundImage: "slash.jpg" } %>
-
-<% p @article %>
 <div class="container">
   <h1 class="h3"></h1>
   <p><%= markdown(@article.description) %></p>
   <p><%= markdown(@article.article_body) if @article.article_body %></p>
+  <%= link_to "Github Repo", @article.github_link, class: "c-btn", target: :_blank if @article.github_link %>
+  <%= link_to "Deployed Link", @article.deployed_link, class: "c-btn", target: :_blank if @article.deployed_link %>
   <% if @article.user %>
     by <%= link_to @article.user.username, user_path(@article.user) %>
   <% end %>
@@ -15,3 +15,5 @@
   <% end %>
   <%= link_to 'Return to articles', articles_path%>
 </div>
+
+<% p @article.github_link %>
