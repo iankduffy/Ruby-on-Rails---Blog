@@ -1,3 +1,7 @@
+const purgecss = require("@fullhuman/postcss-purgecss")({
+  content: ["./app/views/**/*.html.erb"],
+  defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+})
 
 module.exports = {
   plugins: [
@@ -9,8 +13,6 @@ module.exports = {
       },
       stage: 3
     }), 
-    require('@fullhuman/postcss-purgecss')({
-      content: ['./app/views/**/*.html.erb']
-    })
+    [purgecss]
   ]
 }
