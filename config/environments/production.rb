@@ -28,7 +28,15 @@ Rails.application.configure do
   config.assets.compile = false
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.asset_host = ['', 'https://rails-image-blog.s3-eu-west-1.amazonaws.com/']
+  # config.action_controller.asset_host = 'http://assets.example.com'
+
+    config.action_controller.asset_host = proc { |source|
+      # use imgix for the file types in the array, but not for sprites.svg
+      # sprites.svg needs to be on the same domain, otherwise, CORS issues
+      if [".jpg", ".jpeg", ".png", ".svg", ".webp"].include?(File.extname(source)) && !File.basename(source).include?("sprites-")
+        "https://rails-image-blog.s3-eu-west-1.amazonaws.com/"
+      end
+    }
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
