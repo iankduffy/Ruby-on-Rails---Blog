@@ -22,7 +22,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'will_paginate', '~> 3.1.0'
 
 gem 'simplemde-rails'
-gem 'redcarpet', '~> 3.4'
+gem 'redcarpet', '~> 3.5'
 gem 'rouge', '~> 3.3'
 
 # Use Active Storage variant
